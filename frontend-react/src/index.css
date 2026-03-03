@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    background-color: #0d1017;
+    color: #e2e8f0;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0d1017; }
+  ::-webkit-scrollbar-thumb { background: #1f2a3c; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #2a3a54; }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#161d2a] border border-[#1f2a3c] rounded-xl;
+  }
+
+  .btn-primary {
+    @apply bg-emerald-500 hover:bg-emerald-400 text-white font-medium px-5 py-2.5 rounded-lg
+           transition-all duration-200 flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply text-slate-400 hover:text-white hover:bg-white/5 px-4 py-2 rounded-lg
+           transition-all duration-200 flex items-center gap-2;
+  }
+
+  .input {
+    @apply w-full bg-[#0d1017] border border-[#1f2a3c] rounded-lg px-4 py-2.5 text-slate-200
+           placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1
+           focus:ring-emerald-500/20 transition-all duration-200 font-body text-sm;
+  }
+
+  .label {
+    @apply text-xs font-medium text-slate-500 uppercase tracking-wider mb-1.5 block;
+  }
+
+  .source-pill {
+    @apply inline-flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20
+           text-emerald-400 text-xs px-2.5 py-1 rounded-full;
+  }
+
+  .section-heading {
+    @apply font-display text-2xl text-white italic;
+  }
+}
+
+/* Markdown content styles */
+.prose-fin {
+  color: #cbd5e1;
+  line-height: 1.75;
+  font-size: 0.9375rem;
+}
+.prose-fin h2 { color: #fff; font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+.prose-fin h3 { color: #e2e8f0; font-size: 1rem; font-weight: 500; margin: 1.25rem 0 0.5rem; }
+.prose-fin ul { padding-left: 1.5rem; list-style-type: disc; }
+.prose-fin li { margin: 0.35rem 0; }
+.prose-fin strong { color: #f1f5f9; font-weight: 600; }
+.prose-fin p { margin: 0.75rem 0; }
