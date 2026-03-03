@@ -1,0 +1,27 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# Database
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.29.0
+pgvector==0.3.5
+
+# Claude / Anthropic
+anthropic==0.37.1
+
+# Embeddings (local, free)
+sentence-transformers==3.2.0
+
+# Document parsing
+pypdf==5.0.1
+
+# LangChain for text splitting
+langchain==0.3.4
+langchain-text-splitters==0.3.2
+
+# Utilities
+python-multipart==0.0.12
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
